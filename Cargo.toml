@@ -8,3 +8,9 @@ edition = "2021"
 [dependencies]
 clap = { version = "4.0.32", features = ["derive"] }
 uuid = { version = "1.2.2", features = ["v4"] }
+
+[profile.release]
+strip = true  # Automatically strip symbols from the binary.
+opt-level = "z"  # Optimize for size.
+lto = true # Link-time optimization.
+codegen-units = 1  # Reduce codegen units to 1 to reduce binary size.

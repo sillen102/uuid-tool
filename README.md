@@ -11,7 +11,7 @@ $ uuid-tool
 
 ### Specifying number of uuid's to generate
 ```shell
-$ uuid-tool -n 4
+$ uuid-tool -n 5
 39a5b5ee-2f82-4ecd-82d6-e2bea5742bdd
 93d36dd1-50a0-46ab-9b6b-7237fff7934e
 5f3aab10-4a14-4807-9913-c9a15edc1b63

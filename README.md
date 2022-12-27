@@ -1,7 +1,45 @@
 # uuid-tool
 Command line tool to generate uuid's (v4) in the terminal written in [Rust](https://www.rust-lang.org/).
 
-# Usage
+## Installation
+
+### Downloading binary
+
+- Download the binary for your OS and architecture from the [release](https://github.com/sillen102/uuid-tool/releases/tag/v1.0.0)
+- Place the binary in your PATH and rename it to `uuid-tool`
+
+### Build from source
+A pre-requisite is to have [Rust](https://www.rust-lang.org/) installed.
+
+#### Mac OS
+```shell
+git clone https://github.com/sillen102/uuid-tool.git
+```
+```shell
+cd uuid-tool
+```
+```shell
+cargo build --release
+```
+```shell
+sudo cp target/release/uuid-tool /usr/local/bin/uuid-tool
+```
+
+#### Linux
+```shell
+git clone https://github.com/sillen102/uuid-tool.git
+```
+```shell
+cd uuid-tool
+```
+```shell
+cargo build --release
+```
+```shell
+sudo cp target/release/uuid-tool /bin/uuid-tool
+```
+
+## Usage
 
 ### Without specifying number of uuid's to generate
 ```shell

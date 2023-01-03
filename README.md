@@ -64,15 +64,60 @@ c2b47001-1181-44a6-87d6-ad82be8718e2
 Copied to clipboard
 ```
 
+### Use custom separator
+```shell
+$ uuid-tool -s ' - ' -n 2
+eab09f14-552a-4afd-b237-c73414f03d30 - 879c84eb-e057-4570-ba6f-1122c362b5c2
+```
+
 ### Help
 ```shell
 $ uuid-tool -h
 Usage: uuid-tool [OPTIONS]
 
 Options:
-  -n, --number <NUMBER>    Number of uuids to generate [default: 1]
-  -c, --copy-to-clipboard  Copy generated uuids to clipboard
-  -h, --help               Print help information
-  -V, --version            Print version information
+  -n, --number <NUMBER>        Number of uuids to generate [default: 1]
+  -c, --copy-to-clipboard      Copy generated uuids to clipboard
+  -s, --separator <SEPARATOR>  Separator between uuids [default: new line]
+  -h, --help                   Print help information
+  -V, --version                Print version information
+```
 
+## Cross compilation
+
+The following commands work on an M1 Macbook Pro using the contents of this repository with cross installed.
+
+### Prerequisites
+- Rust
+- Cross
+- Docker
+
+Install cross:
+```shell
+$ cargo install -f cross
+```
+
+### Windows (x86_64)
+```shell
+$ cross build --target x86_64-pc-windows-gnu --release 
+```
+
+### Linux (arm-v7)
+```shell
+$ cross build --target armv7-unknown-linux-gnueabihf --release
+```
+
+### Linux (arm64)
+```shell
+$ cross build --target aarch64-unknown-linux-gnu --release
+```
+
+### Linux (x86_64)
+```shell
+$ cross build --target x86_64-unknown-linux-gnu --release
+```
+
+### Mac OS (x86_64)
+```shell
+$ cross build --target x86_64-apple-darwin --release
 ```

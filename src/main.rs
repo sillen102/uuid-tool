@@ -11,20 +11,24 @@ struct Args {
     /// Copy generated uuids to clipboard
     #[arg(short, long, default_value_t = false)]
     copy_to_clipboard: bool,
+    /// Separator between uuids [default: new line]
+    #[arg(short, long)]
+    separator: Option<String>,
 }
 
 fn main() {
     let args = Args::parse();
-    let mut uuids : Vec<Uuid> = Vec::new();
+    let mut uuids: Vec<Uuid> = Vec::new();
     let mut uuids_string = String::new();
+    let separator = args.separator.unwrap_or("\n".to_string());
 
     for count in 0..args.number {
         let uuid = Uuid::new_v4();
         uuids.push(uuid);
         uuids_string.push_str(uuid.to_string().as_str());
 
-        if is_not_last(&args, count) {
-            uuids_string.push_str("\n");
+        if (count + 1) < args.number {
+            uuids_string.push_str(separator.as_str());
         }
     }
 
@@ -35,8 +39,4 @@ fn main() {
         ctx.set_contents(uuids_string).unwrap();
         println!("Copied to clipboard");
     }
-}
-
-fn is_not_last(args: &Args, count: u16) -> bool {
-    (count + 1) < args.number
 }

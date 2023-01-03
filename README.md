@@ -5,7 +5,7 @@ Command line tool to generate uuid's (v4) in the terminal written in [Rust](http
 
 ### Downloading binary
 
-- Download the binary for your OS and architecture from the [release](https://github.com/sillen102/uuid-tool/releases/tag/v1.0.0)
+- Download the binary for your OS and architecture from the [release](https://github.com/sillen102/uuid-tool/releases/tag/v1.1.0)
 - Place the binary in your PATH and rename it to `uuid-tool`
 
 ### Build from source

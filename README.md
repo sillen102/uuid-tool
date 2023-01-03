@@ -57,13 +57,22 @@ a8a7a8a5-1c80-49fa-be94-d29bae8fe412
 31067641-dd5c-41ea-b183-51fac01efc89
 ```
 
+### Copy generated uuid's to clipboard
+```shell
+$ uuid-tool -c
+c2b47001-1181-44a6-87d6-ad82be8718e2
+Copied to clipboard
+```
+
 ### Help
 ```shell
 $ uuid-tool -h
 Usage: uuid-tool [OPTIONS]
 
 Options:
-  -n, --number <NUMBER>  Number of uuids to generate [default: 1]
-  -h, --help             Print help information
-  -V, --version          Print version information
+  -n, --number <NUMBER>    Number of uuids to generate [default: 1]
+  -c, --copy-to-clipboard  Copy generated uuids to clipboard
+  -h, --help               Print help information
+  -V, --version            Print version information
+
 ```

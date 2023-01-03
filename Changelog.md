@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.2.0 (-)
+
+
 ### 1.1.0 (2023-01-03)
 - Added support for generating more than 255 uuid's at a time
 - Added Dockerfiles for cross compiling the project
